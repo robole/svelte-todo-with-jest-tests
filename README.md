@@ -1,29 +1,34 @@
-# Svelte + Vite + Jest Template App
+# Svelte Todo app with tests
 
-This template should help get you started developing with Svelte in Vite, and testing with Jest.
-
-The template is based on the template from the Vite website created by running the following:
-
-```bash
-npm init vite@latest example-svelte-app -- --template svelte
-cd example-svelte-app
-npm install
-```
-
-This creates a default "Hello World" project. The homepage says "HELLO WORLD!" and has a counter button courtest of a `Counter` component.
+This is a minimal Todo app to demonstrate how to test a Svelte app with [Jest](https://jestjs.io/) and [Svelte Testing Library](https://testing-library.com/docs/svelte-testing-library/intro).
 
 ![screenshot](img/screenshot.png)
 
-Clicking the button will update it the number in its inner text.
+You can run `npm run dev` to try the app out. The server will be listening at [http://localhost:3000/](http://localhost:3000/).
 
-<img align="center" src="img/counter-component.png" alt="counter component" loading="lazy" width="323" height="106"/>
+## Features
 
-We can run the project with `npm run dev` and visit it at <localhost:3000>.
+The app should do the following:
 
-## But testing..
+1. List todos. When there are no items, the message "Congratulations, all done!" should be shown.
+2. Allow a user to mark/unmark todos as done. When a todo is done, it is styled differently. The text color is gray and has a strike-through decoration.
+3. Allow a user to add new todos, but prohibit the addition of an empty todo.
 
-The Vite template has no testing setup included. And you should probably test your app! I did the ugly work of getting the right packages together for you. Fly chicklet, fly. 🐥
+## Component overview
 
-There are tests for the `App` and `Counter` components included. You can run the test suites with `npm run test`. To run the Jest in watch mode, you can run `npm run test:watch`.
+![screenshot](img/component-figure.png)
 
-Happy Svelte-Vite-Jesting!
+1. The `App` component contains the other components. It has a subheading that shows the status of the todos e.g "1 of 3 remaining ".
+2. The `AddTodo` component contains the form with an text input and button to add new todos to our list.
+3. A `TodoList` component, which will is an unordered list of the todos. Each list item contains a `Todo` component.
+4. The `Todo` component shows the text of the todo and a checkbox for marking the item as done.
+
+The child components dispatch events up to the `App` component to inform it when the data changes from user interaction. For example, `Todo` dispatches a `toggleTodo` event whenever its checkbox is clicked, this event is forwarded by `TodoList` to `App`.
+
+## Tests
+
+The tests are named as `<component_name>.spec.js` along side the component it is testing. You can run `npm run test` to run the test suites.
+
+![test output](img/test-output.png)
+
+The tests operate on the actual DOM nodes, so that the tests are not tied to the implementation details of the framework. The goal is to resemble how the user interacts with the webpage.

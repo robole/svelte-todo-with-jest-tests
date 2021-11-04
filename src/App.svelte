@@ -37,11 +37,14 @@
   main {
     width: 100%;
     max-width: 500px;
-    margin: 1rem auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
+    background-color: rgb(255, 255, 121);
+    border-radius: 2px;
+    box-shadow: rgb(211, 211, 102) 1px 2px 2px 2px, rgba(0 0 0 / 20%) 0 0 1px,
+      rgba(0 0 0 / 10%) 0 4px 2px;
   }
 </style>

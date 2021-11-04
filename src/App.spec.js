@@ -1,5 +1,6 @@
-import App from "./App.svelte";
 import { render, screen, fireEvent } from "@testing-library/svelte";
+
+import App from "./App.svelte";
 
 describe("App", () => {
   const PREDEFINED_TODOS = 3;
@@ -20,7 +21,7 @@ describe("App", () => {
 
     const todoListItems = screen.getAllByRole("listitem");
 
-    expect(screen.getByText(value));
+    expect(screen.getByText(value)).toBeInTheDocument();
     expect(todoListItems.length).toEqual(PREDEFINED_TODOS + 1);
   });
 

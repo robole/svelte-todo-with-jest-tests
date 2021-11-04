@@ -17,8 +17,21 @@
 </div>
 
 <style>
+  div {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+  }
+
   .done {
     color: gray;
     text-decoration: line-through;
+  }
+
+  input {
+    --size: 1.2rem;
+    width: var(--size);
+    height: var(--size);
   }
 </style>

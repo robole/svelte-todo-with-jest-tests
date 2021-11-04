@@ -18,3 +18,11 @@
     >Add</button
   >
 </form>
+
+<style>
+  form {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
+</style>
