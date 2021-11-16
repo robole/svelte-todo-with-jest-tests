@@ -19,8 +19,8 @@
 
 <style>
   ul {
-    list-style: none;
-    margin-left: 0;
     padding-left: 0;
+    margin-left: 0;
+    list-style: none;
   }
 </style>

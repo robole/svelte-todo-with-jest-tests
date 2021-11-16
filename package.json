@@ -6,6 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
+    "lint:css": "node_modules/stylelint/bin/stylelint.js **/*.svelte",
+    "lint:css:fix": "npm run lint:css -- --fix",
     "test": "jest src",
     "test:watch": "npm run test -- --watch"
   },
@@ -16,8 +18,12 @@
     "@testing-library/svelte": "^3.0.3",
     "@testing-library/user-event": "^13.5.0",
     "babel-jest": "^27.3.1",
+    "eslint-config-svelte3-roboleary": "^0.5.0",
     "jest": "^27.3.1",
     "jest-transform-stub": "^2.0.0",
+    "postcss-html": "^1.2.0",
+    "stylelint": "^14.1.0",
+    "stylelint-config-svelte-roboleary": "^0.2.3",
     "svelte": "^3.37.0",
     "svelte-jester": "^2.1.5",
     "vite": "^2.6.4"

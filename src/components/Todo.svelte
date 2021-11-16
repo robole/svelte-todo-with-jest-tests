@@ -18,10 +18,10 @@
 
 <style>
   div {
-    font-size: 1.2rem;
     display: flex;
-    gap: 0.5rem;
     align-items: flex-end;
+    font-size: 1.2rem;
+    gap: 0.5rem;
   }
 
   .done {
@@ -31,6 +31,7 @@
 
   input {
     --size: 1.2rem;
+
     width: var(--size);
     height: var(--size);
   }
