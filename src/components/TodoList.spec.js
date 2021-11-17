@@ -24,4 +24,9 @@ describe("TodoList", () => {
     await expect(screen.queryByRole("listitem")).toBeNull();
     expect(screen.getByText("Congratulations, all done!"));
   });
+
+  test("should show an empty list when the todos prop is not provided", () => {
+    render(TodoList);
+    expect(screen.getByText("Congratulations, all done!"));
+  });
 });

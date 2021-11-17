@@ -32,3 +32,13 @@ The tests are named as `<component_name>.spec.js` along side the component it is
 ![test output](img/test-output.png)
 
 The tests operate on the actual DOM nodes, so that the tests are not tied to the implementation details of the framework. The goal is to resemble how the user interacts with the webpage.
+
+The coverage is 98%.
+
+![test coverage](img/test-coverage.png)
+
+## Helpful?
+
+Star the repo to help others find it. 🌟
+
+[Sponsor me/buy me a coffee](https://ko-fi.com/roboleary ) to enable me to create more open-source tutorials.
