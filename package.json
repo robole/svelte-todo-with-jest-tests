@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "lint": "npm-run-all -p -c lint-js lint-css",
+    "lint:fix": "npm-run-all -p -c lint-js:fix lint-css:fix",
+    "lint-js": "npx eslint .",
+    "lint-js:fix": "npm run lint-js -- --fix",
+    "lint-css": "npx stylelint '**/*.svelte'",
+    "lint-css:fix": "npm run lint-css -- --fix",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint:css": "node_modules/stylelint/bin/stylelint.js **/*.svelte",
-    "lint:css:fix": "npm run lint:css -- --fix",
-    "lint:js": "node_modules/eslint/bin/eslint.js .",
-    "lint:js:fix": "npm run lint -- --fix",
-    "test": "jest src",
+    "test": "jest test",
     "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
@@ -24,9 +26,10 @@
     "eslint-config-svelte3-roboleary": "^0.5.0",
     "jest": "^27.3.1",
     "jest-transform-stub": "^2.0.0",
+    "npm-run-all": "^4.1.5",
     "postcss-html": "^1.2.0",
     "stylelint": "^14.1.0",
-    "stylelint-config-svelte-roboleary": "^0.2.3",
+    "stylelint-config-svelte-roboleary": "^0.3.0",
     "svelte": "^3.37.0",
     "svelte-jester": "^2.1.5",
     "vite": "^2.6.4"

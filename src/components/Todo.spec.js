@@ -11,7 +11,7 @@ describe("Todo", () => {
   test("shows the todo text when rendered", () => {
     render(Todo, { props: { todo: todoDone } });
 
-    expect(screen.getByLabelText("Done")).toBeInTheDocument(); //checkbox
+    expect(screen.getByLabelText("Done")).toBeInTheDocument(); // checkbox
     expect(screen.getByText(todoDone.text)).toBeInTheDocument();
   });
 

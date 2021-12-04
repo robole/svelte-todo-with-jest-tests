@@ -6,6 +6,8 @@ This is a minimal Todo app to demonstrate how to test a Svelte app with [Jest](h
 
 You can run `npm run dev` to try the app out. The server will be listening at [http://localhost:3000/](http://localhost:3000/).
 
+You can read the companion article - [Testing a Svelte app with Jest](https://www.roboleary.net/2021/11/18/svelte-app-testing-jest.html) to learn more about the project set-up.
+
 ## Features
 
 The app should do the following:
@@ -37,8 +39,12 @@ The coverage is 98%.
 
 ![test coverage](img/test-coverage.png)
 
+## Linting
+
+The project is set-up to lint CSS (with stylelint) and JavaScript (with ESLint). You can run `npm run lint` to lint both, and `npm run lint:fix` to fix any autofixable errors. This is done with the help of [`npm-run-all`](https://www.npmjs.com/package/npm-run-all).
+
 ## Helpful?
 
 Star the repo to help others find it. 🌟
 
-[Sponsor me/buy me a coffee](https://ko-fi.com/roboleary ) to enable me to create more open-source tutorials.
+[Sponsor me/buy me a coffee](https://ko-fi.com/roboleary ) to enable me to create more open-source tutorials like this.

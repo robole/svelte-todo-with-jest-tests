@@ -22,6 +22,7 @@
 <style>
   form {
     display: flex;
+
     justify-content: flex-end;
     gap: 0.5rem;
   }
